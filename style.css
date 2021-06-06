@@ -12,7 +12,7 @@ body {
 .background {
   width: 100vw;
   height: 100vh;
-  background-image: url(/assets/images/wp4451205-brush-wallpapers.jpg);
+  background-image: url(https://raw.githubusercontent.com/naim30/piano-tune/master/assets/images/wp4451205-brush-wallpapers.jpg);
   background-position: center;
   background-size: cover;
   position: fixed;
