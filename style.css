@@ -1,0 +1,250 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/assets/images/wp4451205-brush-wallpapers.jpg);
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+}
+
+.main-page {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav {
+  width: 100%;
+  height: 10%;
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav > .name {
+  font-family: "Caveat";
+  font-size: 35px;
+  font-weight: 600;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.685);
+  padding: 5px 30px;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.piano-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  margin: 40px;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 25px;
+  color: #5252527e;
+}
+
+.piano-wrapper {
+  box-sizing: border-box;
+  width: 1010px;
+  height: 230px;
+  overflow-x: scroll;
+  user-select: none;
+  padding: 5px;
+  margin: 20px 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid rgb(228, 228, 228);
+}
+
+.piano-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.piano {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.piano > .key {
+  height: 98%;
+  width: 4.76%;
+  position: relative;
+}
+
+.piano > .key > .white-key {
+  background-image: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  box-shadow: 0px 6px #d2d2d2b4;
+  border: 1px solid #c8c8c8;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+.piano > .key > .white-key > i {
+  padding: 10px 0px;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+.piano > .key > .black-key {
+  z-index: 2;
+  position: absolute;
+  background-color: #111111;
+  color: white;
+  width: 80%;
+  height: 60%;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  top: -1px;
+  box-sizing: border-box;
+  box-shadow: 0px 6px #d2d2d2c0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  left: 60%;
+}
+
+.piano > .key > .black-key > i {
+  padding: 10px 0px;
+  font-family: sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.color-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.color {
+  box-sizing: border-box;
+  margin: 20px 0px;
+  background-color: rgb(240, 238, 238);
+  border-radius: 5px;
+  border: 2px solid rgb(228, 228, 228);
+}
+
+.color-circle {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.color-circle > li > div {
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  margin: 5px;
+}
+
+.white {
+  background-color: white;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+/*-------------------media queries----------------*/
+
+@media (max-width: 1012px) {
+  .piano-wrapper {
+    width: 800px;
+  }
+}
+
+@media (max-width: 800px) {
+  .piano-wrapper {
+    width: 100vw;
+    height: 200px;
+  }
+}
+
+@media (max-width: 650px) {
+  .piano-wrapper {
+    width: 100vw;
+    height: 180px;
+  }
+
+  .piano > .key > .white-key > i {
+    font-size: 12px;
+  }
+
+  .piano > .key > .black-key > i {
+    font-size: 10px;
+  }
+
+  .nav > .logo > img {
+    height: 30px;
+  }
+
+  .nav > .name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .piano-wrapper {
+    width: 100vw;
+    height: 200px;
+  }
+
+  .piano {
+    width: 800px;
+  }
+
+  .piano > .key > .white-key > i {
+    font-size: 14px;
+  }
+
+  .piano > .key > .black-key > i {
+    font-size: 12px;
+  }
+}
