@@ -31,7 +31,7 @@ let colorObject = {
   yellow: [
     "rgba(255, 255, 0, 0.829)",
     "0px 6px rgba(202, 202, 5, 0.466)",
-    "rgb(160, 124, 26)",
+    "rgb(175, 69, 8)",
     "0px 6px rgba(160, 124, 26, 0.315)",
     "rgba(226, 226, 0, 0.829)",
   ],
@@ -119,6 +119,14 @@ function colorChangeHandler(event) {
       selectedColor = "yellow";
       changeColor(selectedColor);
     }
+    let colors = document.querySelectorAll(".color-name");
+    for (let i = 0; i < colors.length; i++) {
+      colors[i].style.boxShadow = "none";
+    }
+    let selected = document.querySelector(
+      `div[class="color-name ${selectedColor}"]`
+    );
+    selected.style.boxShadow = "0px 0px 7px 0px black";
   }
 }
 
