@@ -62,7 +62,6 @@ body {
 }
 
 .piano-wrapper {
-  touch-action: none;
   box-sizing: border-box;
   width: 1010px;
   height: 230px;

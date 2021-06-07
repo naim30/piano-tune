@@ -51,7 +51,6 @@ let clikedKey = null;
 
 function clickPianoHandler(event) {
   clikedKey = event.target.closest("span[data-key]");
-  event.preventDefault();
   playPiano(clikedKey);
 }
 
